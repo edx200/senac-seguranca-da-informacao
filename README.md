@@ -2,9 +2,25 @@
 
 Atividades práticas da disciplina de **Resiliência Cibernética**, 4º semestre, Faculdade de Tecnologia e Inovação Senac-DF.
 
-Este repositório guarda **o que eu fiz e o que aprendi** em cada atividade. O passo a passo detalhado dos comandos e as entregas avaliadas ficam em repositório privado compartilhado com o professor.
+Cada atividade aqui traz **o raciocínio técnico, os comandos seguros de publicar e o que eu aprendi**. As entregas avaliadas e a execução completa ficam em repositório privado com o professor.
 
-> **Por que público:** para que o processo fique legível — a decisão tomada, o erro que apareceu e como foi resolvido. É assim que eu trabalho no sistema que mantenho em produção ([Comanda Vexto](https://github.com/edx200/comandas-pro-portfolio)).
+---
+
+## O que entra aqui e o que não entra
+
+Nem todo comando de um laboratório de segurança pode ser publicado. Uso este critério, atividade por atividade:
+
+| ✅ Publico | 🔒 Fica no privado |
+|---|---|
+| Enumeração e análise em alvo próprio (`nmap -sV`, filtros do Wireshark) | Cadeia de exploração que funciona de ponta a ponta |
+| Comandos de **defesa** e endurecimento (regras de firewall, SSH, fail2ban) | Payload pronto para copiar e colar contra terceiro |
+| Leitura e interpretação de saída | Credencial, hash, chave ou token — **mesmo de laboratório** |
+| IP privado de lab (`10.x`, `172.16.x`, `192.168.x`) | IP público, hostname real ou nome de máquina da instituição |
+| Ferramenta e versão usadas | Vulnerabilidade ainda não corrigida em sistema de terceiro |
+
+**A regra que resume:** publico o que ensina a **entender e defender**; guardo o que serve de **receita pronta para atacar**.
+
+Isso vale também para os colegas — atividade com o passo a passo completo exposto vira gabarito, e aprender a fazer é o ponto da disciplina.
 
 ---
 
@@ -18,14 +34,15 @@ Este repositório guarda **o que eu fiz e o que aprendi** em cada atividade. O p
 
 ## Como ler cada atividade
 
-Cada pasta em [`atividades/`](atividades/) tem um `README.md` com a mesma estrutura:
+Cada pasta em [`atividades/`](atividades/) segue a mesma estrutura:
 
 1. **Objetivo** — o que a atividade pedia
-2. **Ambiente** — máquinas, sistemas e ferramentas usadas
+2. **Ambiente** — máquinas, sistemas e ferramentas
 3. **O que eu fiz** — a sequência de decisões, em texto corrido
-4. **O que deu errado** — e como contornei
-5. **O que eu levo disso** — a conclusão prática
-6. **Evidências** — prints e saídas relevantes
+4. **Comandos** — os que passam no critério acima, com a saída e a leitura dela
+5. **O que deu errado** — e como contornei
+6. **O que eu levo disso** — a conclusão prática
+7. **Evidências** — prints, com dado sensível tarjado
 
 ---
 
@@ -36,10 +53,10 @@ Cada pasta em [`atividades/`](atividades/) tem um `README.md` com a mesma estrut
 | Kali Linux | SSD externo com LUKS, para as práticas ofensivas |
 | Windows 11 | estação principal, disco com VeraCrypt |
 
-Todas as práticas acontecem em **laboratório isolado ou em alvo próprio, com autorização**.
+Todas as práticas acontecem em **laboratório isolado ou em alvo próprio, com autorização**. Nada aqui foi executado contra sistema de terceiro.
 
 ---
 
-## Formação e contexto
+## Contexto
 
-Desenvolvedor do [Comanda Vexto](https://github.com/edx200/comandas-pro-portfolio), SaaS em produção com restaurantes usando diariamente. Caminhando para Application Security — [perfil completo](https://github.com/edx200).
+Desenvolvedor do [Comanda Vexto](https://github.com/edx200/comandas-pro-portfolio), SaaS em produção com restaurantes usando diariamente — onde tomo decisões de segurança que valem dinheiro de cliente. Esta disciplina é a ponte entre escrever o sistema e saber atacá-lo. [Perfil completo](https://github.com/edx200).
