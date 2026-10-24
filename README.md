@@ -39,6 +39,16 @@ Isso vale também para os colegas — atividade com o passo a passo completo exp
 
 ---
 
+## Práticas pessoais
+
+Hardening autodirigido, fora do conteúdo da disciplina:
+
+| Prática | Tema |
+|---|---|
+| [Criptografia de disco](praticas/criptografia-de-disco/) | Full-disk encryption no Windows (VeraCrypt) e no Linux (LUKS) — dados em repouso |
+
+---
+
 ## Como ler cada atividade
 
 Cada pasta em [`atividades/`](atividades/) segue a mesma estrutura:
