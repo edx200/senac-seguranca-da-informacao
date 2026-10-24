@@ -1,6 +1,6 @@
-# Resiliência Cibernética — Senac-DF
+# Segurança da Informação — Senac-DF
 
-Atividades práticas da disciplina de **Resiliência Cibernética**, 4º semestre, Faculdade de Tecnologia e Inovação Senac-DF.
+Atividades práticas e analíticas do curso de **Segurança da Informação**, 4º semestre, Faculdade de Tecnologia e Inovação Senac-DF. A maior parte são laboratórios da disciplina de **Resiliência Cibernética**; cada atividade indica a sua disciplina no cabeçalho.
 
 Cada atividade aqui traz **o raciocínio técnico, os comandos seguros de publicar e o que eu aprendi**. As entregas avaliadas e a execução completa ficam em repositório privado com o professor.
 
