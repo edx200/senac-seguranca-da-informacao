@@ -6,28 +6,35 @@
 
 ## Objetivo
 
-Compreender, em laboratório controlado, como um atacante procura manter o acesso a um sistema após o ingresso inicial e, do ponto de vista defensivo, como essa permanência é detectada e removida. A prática foi executada em ambiente isolado, sobre alvo autorizado.
+Compreender, em laboratório controlado, como um atacante garante acesso contínuo e recorrente a um sistema já comprometido, e — do ponto de vista defensivo — como cada mecanismo de permanência é detectado e removido. A prática foi executada em ambiente isolado, sobre host autorizado, como etapa de pós-exploração.
 
-> Esta página pública trata do conceito e da defesa. A execução foi documentada por capturas de tela, mantidas como evidência no repositório privado da disciplina; o procedimento ofensivo não é reproduzido aqui.
+> Esta página pública trata do conceito e da defesa. Os scripts e os comandos de persistência permanecem no repositório privado da disciplina; aqui não há receita pronta.
 
 ## Fundamento
 
-A persistência é a etapa posterior ao acesso inicial: consiste em assegurar o retorno ao sistema por meio de um mecanismo que sobreviva a uma reinicialização ou à troca de senha. Esse mecanismo costuma assumir a forma de uma tarefa agendada, um serviço instalado, uma chave de acesso adicionada ou uma conta criada para esse fim.
+A persistência é a etapa posterior ao acesso inicial: assegura o retorno ao sistema por meio de um mecanismo que sobreviva a uma reinicialização, à troca de senha ou à queda da sessão. O objetivo deixa de ser entrar e passa a ser não precisar entrar de novo, o que costuma exigir modificar algo que o sistema executa de forma automática e recorrente.
 
-O objetivo do atacante, nesta fase, deixa de ser entrar e passa a ser não precisar entrar de novo. Por isso a persistência quase sempre modifica algo que o sistema executa de forma automática e recorrente — exatamente o tipo de alteração que um inventário bem mantido torna visível.
+## O que a prática demonstrou
+
+A partir do host comprometido, a pós-exploração estabeleceu um canal de retorno — uma conexão iniciada pela própria máquina-alvo de volta ao atacante, recebida por um ouvinte à espera. Esse canal foi então tornado persistente por dois mecanismos complementares do Linux:
+
+- **Agendador de tarefas (cron):** uma tarefa programada para reexecutar o canal de retorno em intervalo fixo, garantindo a reconexão automática caso a sessão caísse.
+- **Perfil de usuário (`.bashrc`):** uma instrução adicionada ao perfil, de modo que o canal fosse disparado silenciosamente a cada nova sessão de terminal.
+
+O ponto a reter é que os dois mecanismos se apoiam em recursos legítimos do sistema — agendamento e perfil de shell — desviados de sua função. É justamente essa reutilização do legítimo que torna a persistência difícil de notar sem um inventário de referência.
 
 ## Defesa
 
-A persistência tem uma característica que joga a favor de quem defende: ela deixa rastro. Diferente de uma ação pontual, precisa permanecer, e o que permanece pode ser inventariado e comparado.
+A persistência tem uma característica a favor de quem defende: ela precisa permanecer, e o que permanece pode ser inventariado e comparado.
 
-- **Manter o inventário do que deveria existir** — tarefas agendadas, serviços, contas e chaves de acesso legítimas — para que o que é novo se destaque.
-- **Monitorar as alterações no que persiste entre reinicializações**, ponto em que os mecanismos de persistência se revelam.
-- **Registrar a autoria de cada criação** de conta, serviço ou tarefa, de modo que uma origem anômala apareça.
-- **Remover com base no inventário**, e não só o artefato visível: uma persistência bem feita costuma ter mais de um ponto de retorno.
+- **Inventariar o que deveria existir** — tarefas agendadas, serviços, contas — e investigar o que destoa. Uma tarefa de cron que reexecuta um script a cada minuto é um padrão anômalo evidente sob revisão.
+- **Monitorar os pontos clássicos de persistência:** o cron de cada usuário, os arquivos de perfil (`.bashrc` e equivalentes) e os serviços de inicialização.
+- **Registrar a autoria das alterações** nesses pontos, para que uma modificação fora do processo apareça.
+- **Remover com base no inventário, não apenas o artefato visível:** uma persistência bem feita costuma ter mais de um ponto de retorno — neste laboratório, foram dois.
 
 ## Conclusão
 
-A lição que incorporo é de detecção. Como a persistência precisa sobreviver no tempo, ela é combatida menos por impedir e mais por perceber: um sistema que registra suas ações sensíveis — a criação de um usuário, de um serviço, de uma tarefa — transforma a permanência do atacante em um evento observável. É o mesmo princípio que apliquei ao manter uma trilha de auditoria no meu sistema, para que o anormal tenha onde aparecer.
+A lição que incorporo é de detecção. Como a persistência precisa sobreviver no tempo e se esconde em recursos legítimos, ela é combatida menos por impedir e mais por perceber: um sistema que registra suas ações sensíveis e mantém um inventário de referência transforma a permanência do atacante em um desvio observável. É o mesmo princípio por trás da trilha de auditoria que mantenho no meu sistema, para que o anormal tenha onde aparecer.
 
 ## Evidências
 
