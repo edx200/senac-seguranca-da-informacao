@@ -36,6 +36,7 @@ Isso vale também para os colegas — atividade com o passo a passo completo exp
 | 06 | [Acesso Inicial com Exploit](atividades/06-acesso-inicial-com-exploit/) |
 | 07 | [Persistência](atividades/07-persistencia/) |
 | 08 | [Políticas de Segurança](atividades/08-politicas-de-seguranca/) |
+| 09 | [Backup e Restauração](atividades/09-backup-e-restauracao/) |
 
 ---
 
