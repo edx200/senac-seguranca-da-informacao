@@ -26,18 +26,16 @@ Isso vale também para os colegas — atividade com o passo a passo completo exp
 
 ## Atividades
 
-| # | Atividade | Status |
-|---|---|---|
-| 01 | [Reconhecimento e Footprinting](atividades/01-reconhecimento-e-footprinting/) | ⬜ |
-| 02 | [Varredura com Nmap](atividades/02-varredura-com-nmap/) | ⬜ |
-| 03 | [Análise de Tráfego com Wireshark](atividades/03-analise-de-trafego-wireshark/) | ⬜ |
-| 04 | [Phishing](atividades/04-phishing/) | ⬜ |
-| 05 | [Força Bruta](atividades/05-forca-bruta/) | ⬜ |
-| 06 | [Acesso Inicial com Exploit](atividades/06-acesso-inicial-com-exploit/) | ⬜ |
-| 07 | [Persistência](atividades/07-persistencia/) | ⬜ |
-| 08 | [Políticas de Segurança](atividades/08-politicas-de-seguranca/) | ⬜ |
-
-<sub>⬜ a escrever · 🟨 em andamento · ✅ publicada</sub>
+| # | Atividade |
+|---|---|
+| 01 | [Reconhecimento e Footprinting](atividades/01-reconhecimento-e-footprinting/) |
+| 02 | [Varredura com Nmap](atividades/02-varredura-com-nmap/) |
+| 03 | [Análise de Tráfego com Wireshark](atividades/03-analise-de-trafego-wireshark/) |
+| 04 | [Phishing](atividades/04-phishing/) |
+| 05 | [Força Bruta](atividades/05-forca-bruta/) |
+| 06 | [Acesso Inicial com Exploit](atividades/06-acesso-inicial-com-exploit/) |
+| 07 | [Persistência](atividades/07-persistencia/) |
+| 08 | [Políticas de Segurança](atividades/08-politicas-de-seguranca/) |
 
 ---
 

@@ -1,6 +1,6 @@
 # Atividade NN — Título
 
-**Disciplina:** Resiliência Cibernética · **Data:** DD/MM/AAAA
+**Disciplina:** Resiliência Cibernética
 
 ---
 

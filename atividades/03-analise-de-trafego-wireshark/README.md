@@ -1,61 +1,43 @@
 # Atividade 03 — Análise de Tráfego com Wireshark
 
-**Disciplina:** Resiliência Cibernética · **Data:** DD/MM/AAAA
+**Disciplina:** Resiliência Cibernética
 
 ---
 
 ## Objetivo
 
-O que a atividade pedia, em uma ou duas frases.
+Capturar e interpretar o tráfego de rede em ambiente de laboratório para observar o que cada protocolo efetivamente transmite e por que o tráfego em texto claro representa um risco.
 
-## Ambiente
+## Fundamento
 
-| Item | Versão / detalhe |
-|---|---|
-| Sistema | |
-| Ferramenta | |
-| Alvo | lab isolado / alvo próprio |
+O Wireshark apresenta o pacote exatamente como ele trafega. Em protocolos sem cifragem, como HTTP, FTP e Telnet, o usuário e a senha circulam de forma legível para qualquer um posicionado no caminho da comunicação. Sob TLS, o mesmo conteúdo torna-se ininteligível.
 
-## O que eu fiz
+## Execução
 
-Em texto corrido, a sequência de decisões — não a lista de comandos. Por que escolhi
-essa ferramenta, o que eu esperava ver, o que o resultado significou.
-
-## Comandos
-
-> Só o que passa no critério do [README](../README.md): ensina a entender ou defender,
-> e não funciona como receita pronta contra terceiro. Credencial, hash, IP público e
-> cadeia de exploração completa ficam no repositório privado.
+Descrevo nesta seção a sequência de decisões da execução que realizei. Os comandos reproduzidos abaixo restringem-se aos que atendem ao critério definido no [README](../../README.md): aqueles que auxiliam a compreender ou a defender e que não constituem uma receita pronta. Credenciais, payloads e a cadeia completa de exploração permanecem no repositório privado da disciplina.
 
 ```bash
-comando
+# comando executado
 ```
 
-**Saída:**
+Saída obtida:
 
 ```
-saída real, com dado sensível substituído por <REDIGIDO>
+# saída real, com os dados sensíveis substituídos por <REDIGIDO>
 ```
 
-**Leitura:** o que essa saída significa, e por que o próximo passo é o que vem a seguir.
-Esta linha é a que importa — o comando qualquer um copia, a interpretação não.
+A leitura dessa saída indica [interpretação do resultado].
 
-## O que deu errado
+## Dificuldades
 
-O erro, a mensagem exata e como contornei. É a seção mais valiosa do documento —
-não apague por parecer feia.
+[o erro encontrado, a mensagem exata e a forma como foi contornado]
 
-## O que eu levo disso
+## Conclusão
 
-A conclusão prática. Como isso se aplica a um sistema real em produção.
+Esta prática é, para mim, o argumento mais convincente em favor do uso de TLS em todas as comunicações: observar uma credencial surgir em claro em um filtro de captura é mais persuasivo do que qualquer recomendação normativa. Reforça a decisão que mantenho no meu sistema, no qual nenhuma informação sensível, como o PIN ou as chaves, trafega em claro ou é validada no cliente.
 
 ## Evidências
 
-![descrição do print](./imagens/exemplo.png)
+As imagens a seguir documentam a execução. O hostname, o endereço IP público e eventuais tokens foram tarjados.
 
-> Conferir antes de subir: hostname, IP público, nome de usuário e qualquer token
-> visível no print devem estar tarjados.
-
----
-
-> Execução completa e entrega avaliada: repositório privado da disciplina.
+![descrição da evidência](./imagens/exemplo.png)

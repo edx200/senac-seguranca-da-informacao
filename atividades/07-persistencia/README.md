@@ -1,61 +1,43 @@
 # Atividade 07 — Persistência
 
-**Disciplina:** Resiliência Cibernética · **Data:** DD/MM/AAAA
+**Disciplina:** Resiliência Cibernética
 
 ---
 
 ## Objetivo
 
-O que a atividade pedia, em uma ou duas frases.
+Compreender como um atacante procura manter o acesso após o ingresso inicial e, do ponto de vista defensivo, como essa permanência é detectada e removida.
 
-## Ambiente
+## Fundamento
 
-| Item | Versão / detalhe |
-|---|---|
-| Sistema | |
-| Ferramenta | |
-| Alvo | lab isolado / alvo próprio |
+A persistência consiste em assegurar o retorno ao sistema por meio de um mecanismo que sobreviva a uma reinicialização ou à troca de senha, como uma tarefa agendada, um serviço instalado ou uma conta criada. É uma etapa posterior ao acesso inicial.
 
-## O que eu fiz
+## Execução
 
-Em texto corrido, a sequência de decisões — não a lista de comandos. Por que escolhi
-essa ferramenta, o que eu esperava ver, o que o resultado significou.
-
-## Comandos
-
-> Só o que passa no critério do [README](../README.md): ensina a entender ou defender,
-> e não funciona como receita pronta contra terceiro. Credencial, hash, IP público e
-> cadeia de exploração completa ficam no repositório privado.
+Descrevo nesta seção a sequência de decisões da execução que realizei. Os comandos reproduzidos abaixo restringem-se aos que atendem ao critério definido no [README](../../README.md): aqueles que auxiliam a compreender ou a defender e que não constituem uma receita pronta. Credenciais, payloads e a cadeia completa de exploração permanecem no repositório privado da disciplina.
 
 ```bash
-comando
+# comando executado
 ```
 
-**Saída:**
+Saída obtida:
 
 ```
-saída real, com dado sensível substituído por <REDIGIDO>
+# saída real, com os dados sensíveis substituídos por <REDIGIDO>
 ```
 
-**Leitura:** o que essa saída significa, e por que o próximo passo é o que vem a seguir.
-Esta linha é a que importa — o comando qualquer um copia, a interpretação não.
+A leitura dessa saída indica [interpretação do resultado].
 
-## O que deu errado
+## Dificuldades
 
-O erro, a mensagem exata e como contornei. É a seção mais valiosa do documento —
-não apague por parecer feia.
+[o erro encontrado, a mensagem exata e a forma como foi contornado]
 
-## O que eu levo disso
+## Conclusão
 
-A conclusão prática. Como isso se aplica a um sistema real em produção.
+Observo que toda persistência deixa vestígios, e vestígios são detectáveis: uma tarefa agendada que ninguém criou, uma conta surgida fora do processo, um serviço desconhecido. A defesa está em manter o inventário do que deveria existir, monitorar as alterações naquilo que persiste entre reinicializações e registrar a autoria de cada criação. A lição que incorporo é a de detecção: um sistema precisa registrar as ações sensíveis, como a criação de um usuário, para que o comportamento anômalo se torne visível, exatamente como fiz ao implementar a trilha de auditoria. O procedimento ofensivo permanece no repositório privado.
 
 ## Evidências
 
-![descrição do print](./imagens/exemplo.png)
+As imagens a seguir documentam a execução. O hostname, o endereço IP público e eventuais tokens foram tarjados.
 
-> Conferir antes de subir: hostname, IP público, nome de usuário e qualquer token
-> visível no print devem estar tarjados.
-
----
-
-> Execução completa e entrega avaliada: repositório privado da disciplina.
+![descrição da evidência](./imagens/exemplo.png)

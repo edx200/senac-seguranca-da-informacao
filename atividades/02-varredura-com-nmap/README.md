@@ -1,61 +1,43 @@
 # Atividade 02 — Varredura com Nmap
 
-**Disciplina:** Resiliência Cibernética · **Data:** DD/MM/AAAA
+**Disciplina:** Resiliência Cibernética
 
 ---
 
 ## Objetivo
 
-O que a atividade pedia, em uma ou duas frases.
+Mapear as portas abertas, os serviços e as versões em execução em um host autorizado, compreendendo o que cada modalidade de varredura revela e o volume de ruído que produz.
 
-## Ambiente
+## Fundamento
 
-| Item | Versão / detalhe |
-|---|---|
-| Sistema | |
-| Ferramenta | |
-| Alvo | lab isolado / alvo próprio |
+O Nmap responde a três perguntas: quais portas estão abertas, qual serviço responde em cada uma e qual a sua versão. A versão é a informação mais sensível, pois é ela que associa um serviço a uma vulnerabilidade conhecida, catalogada como CVE.
 
-## O que eu fiz
+## Execução
 
-Em texto corrido, a sequência de decisões — não a lista de comandos. Por que escolhi
-essa ferramenta, o que eu esperava ver, o que o resultado significou.
-
-## Comandos
-
-> Só o que passa no critério do [README](../README.md): ensina a entender ou defender,
-> e não funciona como receita pronta contra terceiro. Credencial, hash, IP público e
-> cadeia de exploração completa ficam no repositório privado.
+Descrevo nesta seção a sequência de decisões da execução que realizei. Os comandos reproduzidos abaixo restringem-se aos que atendem ao critério definido no [README](../../README.md): aqueles que auxiliam a compreender ou a defender e que não constituem uma receita pronta. Credenciais, payloads e a cadeia completa de exploração permanecem no repositório privado da disciplina.
 
 ```bash
-comando
+# comando executado
 ```
 
-**Saída:**
+Saída obtida:
 
 ```
-saída real, com dado sensível substituído por <REDIGIDO>
+# saída real, com os dados sensíveis substituídos por <REDIGIDO>
 ```
 
-**Leitura:** o que essa saída significa, e por que o próximo passo é o que vem a seguir.
-Esta linha é a que importa — o comando qualquer um copia, a interpretação não.
+A leitura dessa saída indica [interpretação do resultado].
 
-## O que deu errado
+## Dificuldades
 
-O erro, a mensagem exata e como contornei. É a seção mais valiosa do documento —
-não apague por parecer feia.
+[o erro encontrado, a mensagem exata e a forma como foi contornado]
 
-## O que eu levo disso
+## Conclusão
 
-A conclusão prática. Como isso se aplica a um sistema real em produção.
+Entendo o resultado de uma varredura como a relação de tudo o que preciso justificar: uma porta aberta sem finalidade é um risco desnecessário. A defesa consiste em encerrar o que não é usado, manter atualizado o que permanece e tratar a própria varredura como um evento detectável. É o mesmo exame que faço ao revisar aquilo que o meu backend expõe.
 
 ## Evidências
 
-![descrição do print](./imagens/exemplo.png)
+As imagens a seguir documentam a execução. O hostname, o endereço IP público e eventuais tokens foram tarjados.
 
-> Conferir antes de subir: hostname, IP público, nome de usuário e qualquer token
-> visível no print devem estar tarjados.
-
----
-
-> Execução completa e entrega avaliada: repositório privado da disciplina.
+![descrição da evidência](./imagens/exemplo.png)
