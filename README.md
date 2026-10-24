@@ -37,6 +37,7 @@ Isso vale também para os colegas — atividade com o passo a passo completo exp
 | 07 | [Persistência](atividades/07-persistencia/) |
 | 08 | [Políticas de Segurança](atividades/08-politicas-de-seguranca/) |
 | 09 | [Backup e Restauração](atividades/09-backup-e-restauracao/) |
+| 10 | [Plano de Continuidade — RTO, RPO e Atividades Críticas](atividades/10-plano-de-continuidade-rto-rpo/) |
 
 ---
 
