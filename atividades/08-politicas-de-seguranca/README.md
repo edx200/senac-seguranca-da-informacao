@@ -1,43 +1,35 @@
 # Atividade 08 — Políticas de Segurança
 
-**Disciplina:** Resiliência Cibernética
+**Disciplina:** Gestão da Segurança da Informação
+
+> Esta atividade pertence à disciplina de Gestão da Segurança da Informação. Foi incluída aqui por complementar o conjunto prático de Resiliência Cibernética com a camada de governança.
 
 ---
 
 ## Objetivo
 
-Converter a prática técnica em norma organizacional, definindo o que é permitido, a quem é permitido e o que deve ser registrado.
+Analisar a estrutura de uma Política de Segurança da Informação, identificando os elementos que a tornam aplicável: o que ela protege, a quem se aplica, quais são as responsabilidades e quais regras devem ser seguidas. A análise tomou como referência a política da empresa fictícia TechSafe Ltda., apresentada em aula.
 
 ## Fundamento
 
-A política de segurança é a camada que não se expressa em código: estabelece papéis e níveis de acesso, o tratamento dos dados pessoais, a resposta a incidentes e as regras que o técnico posteriormente implementa. Sem ela, cada controle técnico passa a depender de uma decisão isolada.
+A política de segurança é a camada que não se expressa em código: estabelece papéis e níveis de acesso, o tratamento dos dados e as regras que o técnico posteriormente implementa. Sem ela, cada controle técnico passa a depender de uma decisão isolada. Analisei a política pelos seus quatro elementos estruturais.
 
-## Execução
+**Objetivo.** Proteger os ativos de informação da organização, estabelecendo diretrizes para preservar a segurança das informações e orientar seu uso adequado.
 
-Descrevo nesta seção a sequência de decisões da execução que realizei. Os comandos reproduzidos abaixo restringem-se aos que atendem ao critério definido no [README](../../README.md): aqueles que auxiliam a compreender ou a defender e que não constituem uma receita pronta. Credenciais, payloads e a cadeia completa de exploração permanecem no repositório privado da disciplina.
+**Escopo.** Define a quem e a quais recursos a política se aplica. No exemplo analisado, alcança todos os colaboradores, terceiros e sistemas, e não apenas a equipe de TI — o que é coerente, já que o uso dos ativos não se restringe à área técnica.
 
-```bash
-# comando executado
-```
+**Responsabilidades.** Estabelecem os papéis de cada parte: alta direção, gestores e usuários têm atribuições definidas. Isso determina quem cumpre as regras e quem responde pela gestão, supervisão e proteção dos ativos.
 
-Saída obtida:
+**Diretrizes.** São as regras a seguir. No exemplo, constam controle de acesso, uso aceitável e gestão de incidentes, que orientam o comportamento dos usuários e reduzem riscos no uso dos recursos.
 
-```
-# saída real, com os dados sensíveis substituídos por <REDIGIDO>
-```
+## Aplicação ao meu contexto
 
-A leitura dessa saída indica [interpretação do resultado].
-
-## Dificuldades
-
-[o erro encontrado, a mensagem exata e a forma como foi contornado]
+Mantenho em produção um sistema que processa dados de clientes de restaurantes, e os quatro elementos analisados têm correspondência direta na sua operação. O escopo e as responsabilidades aparecem no controle de acesso por papel (administrador, gerente, garçom e cozinha), em que cada função alcança apenas o que lhe cabe. As diretrizes de controle de acesso se concretizam no isolamento por tenant definido nas regras do banco, que impede um restaurante de alcançar os dados de outro. E o tratamento de dado pessoal, exigido pela LGPD para quem lida com informação de cliente, está materializado no aviso de coleta no ponto de entrada. Esta atividade é a moldura formal daquilo que já aplico na prática.
 
 ## Conclusão
 
-Entendo que política e técnica se sustentam mutuamente. Uma regra de menor privilégio só tem valor se o sistema a impõe, e um controle técnico sem política documentada não resiste à troca das pessoas envolvidas. No Brasil, a LGPD transforma parte dessas exigências em obrigação legal para quem trata dados de clientes. No meu sistema, que processa dados de clientes de restaurantes, isso se traduz no isolamento por tenant definido nas regras de acesso, na coleta acompanhada de aviso de LGPD no ponto de entrada e no controle de acesso por papel. Esta atividade constitui a moldura formal daquilo que já aplico.
+Uma Política de Segurança da Informação precisa apresentar com clareza o que pretende proteger, a quem se aplica, quais são as responsabilidades e quais regras devem ser seguidas. Política e técnica se sustentam mutuamente: uma regra de menor privilégio só tem valor se o sistema a impõe, e um controle técnico sem política documentada não resiste à troca das pessoas envolvidas.
 
-## Evidências
+---
 
-As imagens a seguir documentam a execução. O hostname, o endereço IP público e eventuais tokens foram tarjados.
-
-![descrição da evidência](./imagens/exemplo.png)
+**Referência:** SENAC-DF. Gestão da Segurança da Informação — Aula 05: Políticas de Segurança da Informação. Prof. Dr. Ronaldo Bach, 2026.2.
