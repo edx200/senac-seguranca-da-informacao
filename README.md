@@ -38,6 +38,7 @@ Isso vale também para os colegas — atividade com o passo a passo completo exp
 | 08 | [Políticas de Segurança](atividades/08-politicas-de-seguranca/) |
 | 09 | [Backup e Restauração](atividades/09-backup-e-restauracao/) |
 | 10 | [Plano de Continuidade — RTO, RPO e Atividades Críticas](atividades/10-plano-de-continuidade-rto-rpo/) |
+| 11 | [Alta Disponibilidade de Banco de Dados](atividades/11-alta-disponibilidade-bd/) |
 
 ---
 
